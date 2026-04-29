@@ -119,6 +119,13 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
+/*
+ * drag and drop escape characters
+ *
+ * this will add a '\\' before any characters specified in the string.
+ */
+char *xdndescchar = " !\"#$&'()*;<>?[\\]^`{|}~";
+
 /* bg opacity */
 float alpha = 0.8;
 

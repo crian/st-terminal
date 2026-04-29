@@ -18,9 +18,13 @@
 				(t1.tv_nsec-t2.tv_nsec)/1E6)
 #define MODBIT(x, set, bit)	((set) ? ((x) |= (bit)) : ((x) &= ~(bit)))
 
-#define TRUECOLOR(r,g,b)	(1 << 24 | (r) << 16 | (g) << 8 | (b))
-#define IS_TRUECOL(x)		(1 << 24 & (x))
-#define HISTSIZE            2000
+#define TRUECOLOR(r,g,b) (1 << 24 | (r) << 16 | (g) << 8 | (b))
+#define IS_TRUECOL(x) (1 << 24 & (x))
+#define HISTSIZE 2000
+
+#define HEX_TO_INT(c) ((c) >= '0' && (c) <= '9' ? (c) - '0' : \
+                       (c) >= 'a' && (c) <= 'f' ? (c) - 'a' + 10 : \
+                       (c) >= 'A' && (c) <= 'F' ? (c) - 'A' + 10 : -1)
 
 // This decor color indicates that the fg color should be used. Note that it's
 // not a 24-bit color because the 25-th bit is not set.
