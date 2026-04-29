@@ -1,0 +1,29 @@
+# Generated config file
+config.h
+
+# Build artifacts
+*.o
+st
+st-*.tar.gz
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
